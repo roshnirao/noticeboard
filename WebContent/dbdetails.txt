@@ -1,0 +1,107 @@
+CREATE TABLE `lecturer` (
+  `email` varchar(100) NOT NULL DEFAULT '',
+  `pass` varchar(20) DEFAULT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `branch` varchar(100) DEFAULT NULL,
+  `mob` varchar(11) DEFAULT NULL,
+  PRIMARY KEY (`email`)
+) 
+
+CREATE TABLE `student` (
+  `usn` varchar(11) NOT NULL DEFAULT '',
+  `pass` varchar(100) DEFAULT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `branch` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `mob` varchar(11) DEFAULT NULL,
+  `studleft` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`usn`)
+) 
+
+create table iainfo(
+id int NOT NULL AUTO_INCREMENT,
+imgid varchar(20),
+branch varchar(50),
+sem varchar(2),
+testno varchar(2),
+date varchar(500),
+ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+primary key(id)
+)
+
+create table exam(
+imgid varchar(20),
+branch varchar(5),
+sem varchar(2),
+sub varchar(10),
+date varchar(100)
+)
+
+create table subcode(
+branch varchar(5),
+sem varchar(2),
+code varchar(10),
+primary key(code))
+
+create table incoll(
+id int NOT NULL AUTO_INCREMENT,
+imgid varchar(20),
+cat varchar(50),
+ename varchar(200),
+einfo varchar(500),
+edate varchar(100),
+ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+primary key(id)
+)
+
+create table outcoll(
+id int NOT NULL AUTO_INCREMENT,
+imgid varchar(20),
+cat varchar(50),
+ename varchar(200),
+einfo varchar(500),
+edate varchar(100),
+ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+primary key(id)
+)
+
+create table technical(
+id int NOT NULL AUTO_INCREMENT,
+imgid varchar(20),
+branch varchar(10),
+year varchar(5),
+cat varchar(50),
+tname varchar(200),
+tinfo varchar(1000),
+tdate varchar(50),
+ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+primary key(id)
+)
+
+create table placement(
+id int NOT NULL AUTO_INCREMENT,
+imgid varchar(20),
+branch varchar(10),
+pname varchar(200),
+pinfo varchar(1000),
+pdate varchar(100),
+ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+primary key(id)
+)
+
+create table money(
+id int NOT NULL AUTO_INCREMENT,
+imgid varchar(20),
+info varchar(1000),
+cat varchar(100),
+sdate varchar(100),
+ldate varchar(100),
+ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+primary key(id)
+)
+
+create table feedback(
+branch varchar(5),
+subject varchar(200),
+info varchar(500)
+)

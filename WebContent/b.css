@@ -1,0 +1,33 @@
+
+
+.resized
+{
+width: 300px; 
+font:30px  Times New Roman;
+}
+
+.resizedb
+{
+width: 300px; 
+font:30px  Times New Roman;
+}
+
+body {
+    background-color:#c6e2ff;
+}
+
+h1 {
+    color: #9D82B8;
+    text-align: center;
+     font-size: 30px;
+}
+h2 {
+    color: 			#ff6f69;
+    text-align: center;
+     font-size: 25px;
+}
+p {
+    font-family: "Times New Roman";
+    font-size: 30px;
+}
+
